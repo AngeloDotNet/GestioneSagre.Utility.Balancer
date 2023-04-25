@@ -4,13 +4,4 @@ services:
   yarp-utility:
     container_name: yarp-utility
     restart: always
-    build:
-      context: .
-      dockerfile: src/GestioneSagre.Balancer/Dockerfile
-    networks:
-      - lan-network
-
-networks:
-  lan-network:
-    external:
-      name: docker-net
+    build: ./src/GestioneSagre.Balancer/Dockerfile
